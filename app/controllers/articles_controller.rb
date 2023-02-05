@@ -3,4 +3,9 @@ class ArticlesController < ApplicationController
     # debugger
     @article = Article.find(params[:id])
   end
+
+  def index
+    # debugger
+    @articles = Article.all
+  end
 end
