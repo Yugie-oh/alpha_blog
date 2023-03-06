@@ -29,7 +29,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.admin = true;
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up"
